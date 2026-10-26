@@ -128,7 +128,7 @@ def run_deliverable_4(Q, R, y_train):
         plt.plot(range(1, epochs + 1), loss, label=f"{label}")
         if eta == 2.1:
             w_div = np.linalg.solve(R, alpha)
-            print(f"\n[Divergent η=2.1 after 100 epochs]:")
+            print(f"\n[Divergent eta=2.1 after 100 epochs]:")
             print(f"Final Loss E = {loss[-1]:.4e}")
             print("Weight vector w:")
             print(w_div)
