@@ -213,15 +213,14 @@ def run_deliverables_5_to_7(Phi_train, y_train, Phi_test, y_test, lams, lam_star
     plt.tight_layout()
     plt.show()
     
-    # Deliverable 7: Discussion
-    print("\nDiscussion (Deliverable 7):")
+    """
     print("  The L1 (Lasso) constraint ball has sharp corners on the coordinate axes, causing the elliptical SSE contours")
     print("  to frequently make first contact directly on an axis where irrelevant coefficients become exactly zero.")
     print("  In contrast, the smooth spherical L2 (Ridge) ball makes contact away from the axes, shrinking all coefficients")
     print("  proportionally without inducing sparsity (only 1 coefficient has |w_j| < 0.01 vs 4 for Lasso).")
     print("  As lambda increases past lambda*, both methods suffer from excessive regularization: training error rises steadily")
     print("  and test error degrades rapidly as the model underfits and flattens out toward zero.")
-
+    """
 # -------------------------------------------------------------
 # Main Execution
 # -------------------------------------------------------------

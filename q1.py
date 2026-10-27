@@ -117,9 +117,9 @@ def run_deliverables_2_and_3(Q, R, y_train, eta=0.1, epochs=2000):
 def run_deliverable_4(Q, R, y_train):
     print("--- Running Deliverable 4: Learning-Rate Study ---")
     # Regimes
-    etas = {'Too small (η=0.01)': 0.01,
-            'Well-chosen (η=0.1)': 0.1,
-            'Too large (η=2.1)': 2.1}
+    etas = {'Too small (eta=0.01)': 0.01,
+            'Well-chosen (eta=0.1)': 0.1,
+            'Too large (eta=2.1)': 2.1}
     epochs = 100
 
     plt.figure(figsize=(10, 6))

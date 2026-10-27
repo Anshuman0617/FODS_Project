@@ -60,8 +60,7 @@ def run_deliverables_1_and_2(x_train, y_train, Phi_train, alpha=0.05, beta=100.0
     print(f"w_MAP: {np.round(w_map, 4)}")
     print(f"m_N  : {np.round(m_N, 4)}")
     print(f"Numerical difference ||w_MAP - m_N||_2: {diff_norm:.2e}")
-    print("Equivalence confirmed: MAP estimate exactly coincides with the Bayesian posterior mean.")
-    
+
     # Plot
     plt.figure(figsize=(10, 6))
     plt.scatter(x_train, y_train, color='black', zorder=5, label='Train Data (N=10)')
@@ -114,13 +113,14 @@ def run_deliverables_3_and_4(alpha=0.05, beta=100.0, degree=3):
     plt.tight_layout()
     plt.show()
     
-    # Deliverable 4: Discussion
+    
+    """
     print("\nDiscussion (Deliverable 4):")
     print("  As training size N increases, the data precision beta * Phi^T Phi dominates the prior precision in S_N^-1,")
     print("  driving parameter covariance S_N toward zero and substantially shrinking parameter uncertainty phi(x)^T S_N phi(x).")
     print("  However, the predictive variance s^2(x) is lower-bounded by the irreducible observation noise beta^-1 = 0.01;")
     print("  hence the interval width asymptotically converges toward the irreducible noise floor (0.392) as N -> inf.")
-
+    """
 # -------------------------------------------------------------
 # Main Execution
 # -------------------------------------------------------------

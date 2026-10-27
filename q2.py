@@ -71,7 +71,6 @@ def run_deliverable_2(Phi_train, y_train, lam=1e-2):
     print(f"Converged in {iters} iterations (relative error = {rel_err:.2e} < 1e-6)")
     print(f"cond(Phi^T Phi)        : {cond_unreg:.2e}")
     print(f"cond(Phi^T Phi + lam*I): {cond_reg:.2e}")
-    print("Conditioning impact: Adding lambda*I shifts the eigenvalues upward, dropping the condition number by 11 orders of magnitude and making gradient descent converge stably.")
     
     plt.figure(figsize=(8, 5))
     plt.plot(losses, color='tab:red', linewidth=1.8)
@@ -101,9 +100,7 @@ def run_deliverable_3(Phi_train, y_train, Phi_test, y_test, lams, ws):
     print(f"Optimal lambda* : {lam_star:.4e} (log10 = {np.log10(lam_star):.2f})")
     print(f"Test RMSE at lambda*: {min_test:.4f}")
     print(f"1.05x interval  : [{interval[0]:.4e}, {interval[1]:.4e}]")
-    print("Discussion: The minimum is quite flat, spanning more than 3 orders of magnitude of lambda.")
-    print("To the left of the interval the model overfits to noise with huge coefficients, while to the right strong regularization overly shrinks the weights, causing underfitting.")
-
+   
     plt.figure(figsize=(8, 5))
     plt.plot(lams, train_rmses, 'b-', label='Train RMSE', linewidth=1.8)
     plt.plot(lams, test_rmses, 'r-', label='Test RMSE', linewidth=1.8)
